@@ -5,8 +5,8 @@ pipeline {
             steps {
                 // Checkout the repository using the SSH URL
                 checkout([$class: 'GitSCM',
-                  branches: [[name: '*/master']],
-                  userRemoteConfigs: [[url: 'git@github.com:applitools/tutorial-images-java.git']]])
+                  branches: [[name: '*/main']],
+                  userRemoteConfigs: [[url: 'https://github.com/IdosApplitools/test-jenkins-pipeline.git']]])
             }
         }
         stage('Start Applitools') {
